@@ -27,6 +27,30 @@ font-family: 'Roboto', sans-serif;
 /*-------------------------------------
 		1.General css (Reset code)
 --------------------------------------*/
+
+:root {
+    --black: #111;
+    --light-black: #333;
+    --blue: #C7FFED;
+    --gray: #CECCCC;
+    --dark-gray: #A9A7A7;
+    --orange: #F2A359;
+    --dark-orange: #C78649;
+    --pink: #F991CC;
+    --dark-pink: #CC77A7;
+    --purple: #81526A;
+    --dark-purple: #73495E;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --white: #FFFAE2;
+    --dark-white: #E8E4CE;
+    --yellow: #FCE373;
+    --dark-yellow: #CFBA5F;
+    
+    --font: 'Amatic SC', cursive;
+  }
+
+
+  
 *{
     padding: 0;
     margin: 0;
@@ -963,4 +987,933 @@ img {
     0%   {bottom:0px;}
     100%  {bottom:7px;}
 }
-/*========================Thank you=================
+/*========================Thank you=================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+
+h1 {
+  font-family: var(--font);
+  font-size: 3rem;
+  font-weight: 700;
+  margin-top: 20px;
+  animation: fadeIn 2s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.container {
+  border: 1px dashed var(--black); 
+  display: flex;
+  flex-direction: column;
+  height: 600px; 
+  width: 800px;
+  position: relative;
+  overflow: hidden;
+}
+*/
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--background, #fff);
+  display: flex;
+  flex-direction: column; /* 垂直排列內容 */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.outer-frame {
+  border: 5px solid var(--dark-gray);
+  width: 400px;
+  padding: 150px;
+  border-radius: 15px;
+  background-color: var(--light-gray, #ffffff);
+  background-image: url('../images/preloader_background/images.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: relative;
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+  margin-bottom: 30px; /* 添加下邊距，給 loader 留空間 */
+}
+
+.loader-container {
+  display: flex; /* 將 loader 和文字水平排列 */
+  align-items: center; /* 垂直居中對齊 */
+  gap: 10px; /* 控制 loader 與文字之間的間距 */
+}
+
+.loader-text {
+  font-size: 40px; /* 設定文字大小 */
+  font-family: system-ui, sans-serif; /* 字型 */
+  font-weight: bold; /* 粗體 */
+  text-transform: uppercase; /* 文字大寫 */
+  color: transparent; /* 隱藏文字本身 */
+  -webkit-text-stroke: 1px #000; /* 外框顏色 */
+  background: 
+    linear-gradient(-60deg, #0000 45%, #000 0 55%, #0000 0) 
+    0/300% 100% no-repeat; /* 漸層背景動畫 */
+  background-clip: text; /* 背景裁剪到文字 */
+  -webkit-background-clip: text; /* 適用於 Webkit 瀏覽器 */
+  animation: l3 2s linear infinite; /* 動態背景效果 */
+}
+
+.loader {
+  width: 45px;
+  aspect-ratio: 0.75; /* 設定寬高比 */
+  --c: no-repeat linear-gradient(#000 0 0); /* 定義 loader 的漸層色 */
+  background: 
+    var(--c) 0%   50%, /* 左側 */
+    var(--c) 50%  50%, /* 中間 */
+    var(--c) 100% 50%; /* 右側 */
+  animation: l7 1s infinite linear alternate; /* 漸層動畫效果 */
+}
+
+@keyframes l7 {
+  0%   {background-size: 20% 50%, 20% 50%, 20% 50%;} /* 起始大小 */
+  20%  {background-size: 20% 20%, 20% 50%, 20% 50%;} /* 左側縮小 */
+  40%  {background-size: 20% 100%, 20% 20%, 20% 50%;} /* 中間縮小 */
+  60%  {background-size: 20% 50%, 20% 100%, 20% 20%;} /* 右側縮小 */
+  80%  {background-size: 20% 50%, 20% 50%, 20% 100%;} /* 右側擴大 */
+  100% {background-size: 20% 50%, 20% 50%, 20% 50%;} /* 返回初始 */
+}
+
+@keyframes l3 {
+  0% {
+    background-position: 100%; /* 起始位置 */
+  }
+  100% {
+    background-position: 0%; /* 移動到左側 */
+  }
+}
+
+
+
+
+
+
+#preloader::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2); /* 50% 透明的白色遮罩 */
+  z-index: 1;
+}
+
+
+@keyframes rotateContainer {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 头部样式 */
+.head {
+  background-color: var(--gray);
+  border-radius: 50%;
+  height: 28%; 
+  width: 20%; 
+  position: absolute;
+  top: 5%; 
+  left: 40%;
+  z-index: 2;
+}
+
+/* 耳朵样式 */
+.ear {
+  background-color: var(--gray);
+  height: 25%; 
+  width: 25%;
+  position: absolute;
+  top: -8%;
+  transform-origin: center bottom;
+}
+
+.left-ear {
+  border-radius: 10px 50px;
+  border-left: 3px solid var(--gray);
+  left: 15%;
+  transform: rotate(-45deg);
+}
+
+.right-ear {
+  border-radius: 50px 10px;
+  border-right: 3px solid var(--gray);
+  right: 15%;
+  transform: rotate(45deg);
+}
+
+/* 内耳样式 */
+.inner-ear {
+  background-color: var(--dark-gray);
+  height: 50%; 
+  width: 25%;
+  position: absolute; 
+  bottom: 40%;
+  transform-origin: center bottom;
+}
+
+.left-inner-ear {
+  border-radius: 30px 50px 30px 50px;
+  left: 2px;
+  transform: rotate(-10deg);
+}
+
+.right-inner-ear {
+  border-radius: 50px 30px 50px 30px;
+  right: 2px;
+  transform: rotate(10deg);
+}
+
+/* 面具样式 */
+.mask {
+  background-color: var(--purple);
+  border-radius: 10px;
+  box-shadow: 0px -6px 2px -3px var(--shadow),
+              0px 4px 2px -1px var(--shadow);
+  height: 32%; 
+  width: 105%;
+  left: -2%; 
+  top: 28%;
+  position: absolute;
+}
+
+/* 眼睛样式 */
+.eyes {
+  background-color: var(--black);
+  border-radius: 50%;
+  height: 15%; 
+  width: 10%;
+  position: absolute;
+  top: 37%;
+  z-index: 2;
+}
+
+.left-eye {
+  left: 30%;
+}
+
+.right-eye {
+  right: 30%;
+}
+
+.eyebrows {
+  background-color: var(--black);
+  height: 25%; 
+  width: 150%;
+  position: absolute;
+}
+
+.left-eyebrow {
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  left: -20%;
+  transform: rotate(15deg);
+  transform-origin: right center;
+}
+
+.right-eyebrow {
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  right: -20%;
+  transform: rotate(-15deg);
+  transform-origin: left center;
+}
+
+.pupils {
+  /* 可根据需要添加瞳孔样式 */
+}
+
+.left-pupil, .right-pupil {
+  background-color: var(--white);
+  border-radius: 50%;
+  height: 50%;
+  width: 50%;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+}
+
+/* 鼻子样式 */
+.nose {
+  background-color: var(--dark-gray);
+  border-radius: 50%;
+  box-shadow: 0px -7px 5px -2px var(--shadow),
+              0px 7px 5px -3px var(--shadow);
+  height: 65%; 
+  width: 120%;
+  left: -11%; 
+  bottom: -18%;
+  position: absolute;
+}
+
+.nostrils {
+  background-color: var(--black);
+  border-radius: 50px;
+  box-shadow: inset 0px -7px 1px 0px #444;
+  height: 22%; 
+  width: 16%;
+  position: absolute;
+  top: 8px;
+}
+
+.left-nostril {
+  left: 28%;
+  transform: rotate(-15deg);
+}
+
+.right-nostril {
+  right: 28%;
+  transform: rotate(15deg);
+}
+
+/* 嘴巴样式 */
+.mouth {
+  animation: evilLaugh 1.5s ease-in-out infinite;
+  background-color: var(--black);
+  border-radius: 30px 30px 50% 50%;
+  height: 45%; 
+  width: 75%;
+  left: 12.5%; 
+  bottom: 10%;
+  position: absolute;
+}
+
+.teeth {
+  background-color: var(--white);
+  border-radius: 50% 50% 50px 50px;
+  box-shadow: inset 0px 5px 3px 0px var(--shadow);
+  height: 25%; 
+  width: 75%;
+  position: absolute;
+  top: 0; 
+  left: 12.5%;
+}
+
+.tongue {
+  background-color: var(--dark-pink);
+  border-radius: 50%;
+  box-shadow: inset 0px 8px 2px -3px var(--shadow);
+  height: 50%; 
+  width: 85%;
+  left: 7.5%; 
+  bottom: 8%;
+  position: absolute;
+}
+
+/* 身体样式 */
+.body {
+  background-color: var(--gray);
+  border-radius: 50% 50% 80px 80px;
+  height: 48%; 
+  width: 32%;
+  position: absolute;
+  top: 30%; 
+  left: 34%;
+}
+
+.cape-neck {
+  background-color: var(--purple);
+  border-radius: 50px;
+  box-shadow: 0px 5px 5px 0px var(--shadow);
+  height: 15%; 
+  width: 75%;
+  position: absolute;
+  top: 6%; 
+  left: 14%;
+}
+
+.knot {
+  background-color: var(--purple);
+  border-radius: 50%;
+  height: 25%; 
+  width: 15%;
+  left: 42.5%; 
+  bottom: -20%;
+  position: absolute;
+}
+
+.knot-clone {
+  height: 100%; 
+  width: 100%;
+  position: absolute;
+  top: 0; 
+  left: 0;
+}
+
+.tie {
+  background-color: var(--dark-purple);
+  border-radius: 10px 10px 100% 100%;
+  height: 125%; 
+  width: 60%;
+  position: absolute; 
+  bottom: -75%;
+  transform-origin: center top;
+}
+
+.left-tie {
+  left: -10%;
+  transform: rotate(45deg);
+}
+
+.right-tie {
+  right: -10%;
+  transform: rotate(-45deg);
+}
+
+/* 披风样式 */
+.cape-behind {
+  background-color: var(--dark-purple);
+  border-radius: 50% 50% 5px 5px;
+  border-left: 8px solid var(--purple);
+  border-right: 8px solid var(--purple);
+  height: 110%; 
+  width: 125%;
+  position: absolute;
+  top: 5%; 
+  left: -16%;
+}
+
+/* 身体克隆样式 */
+.body-clone {
+  border-radius: 50%;
+  box-shadow: 0px 10px 5px 8px var(--shadow);
+  height: 100%; 
+  width: 100%;
+  position: absolute;
+  top: 0; 
+  left: 0;
+}
+
+/* 手臂样式 */
+.arms {
+  background-color: var(--gray);
+  border-radius: 50% 50% 10px 10px;
+  height: 60%; 
+  width: 25%;
+  position: absolute;
+  top: 30%;
+  transform-origin: center top;
+  animation: waveLeftArm 0.71s ease-in-out infinite;
+}
+
+.arms.left-arm {
+  left: 15%;
+  transform: rotate(115deg);
+}
+
+.arms.right-arm {
+  right: 15%;
+  transform: rotate(-115deg);
+  animation: waveRightArm 0.71s ease-in-out infinite;
+}
+
+/* 手套样式 */
+.gloves {
+  background-color: var(--purple);
+  border-radius: 2px 2px 50% 50%;
+  box-shadow: 0px -3px 2px 0px var(--shadow);
+  height: 55%; 
+  width: 110%;
+  position: absolute; 
+  bottom: -27.5%;
+}
+
+.left-glove {
+  left: -5%;
+  animation: leftGlove 0.7s ease-in-out infinite;
+}
+
+.right-glove {
+  right: -5%;
+  animation: rightGlove 0.7s ease-in-out infinite;
+}
+
+@keyframes leftGlove {
+  0%, 100% { transform: rotate(1deg); }
+  50% { transform: rotate(-1deg); }
+}
+
+@keyframes rightGlove {
+  0%, 100% { transform: rotate(-1deg); }
+  50% { transform: rotate(1deg); }
+}
+
+/* 漫画书样式 */
+.comics {
+  height: 50%; 
+  width: 170%;
+  position: absolute; 
+  bottom: 5%;
+}
+
+.left-comic {
+  background-color: var(--yellow);
+  border-radius: 2px 2px 5px 5px;
+  /* 左侧漫画书边框可根据需要启用 */
+  /* border-left: 2px solid var(--white); */
+  border-top: 10px solid var(--white);
+  box-shadow: 0px -2px 0px 0px var(--dark-yellow);
+  left: -25%;
+  animation: none; /* 动画已在.falling-comics1等类中定义 */
+}
+
+.right-comic {
+  background-color: var(--orange);
+  border-radius: 10px 10px 2px 2px;
+  border-right: 1px solid var(--white);
+  border-bottom: 10px solid var(--white);
+  box-shadow: 0px 1px 0px 0px var(--dark-orange);
+  right: -45%;
+  animation: none;
+}
+
+.comics i {
+  border-radius: 5px;
+  height: 95%; 
+  width: 75%;
+  overflow: hidden;
+  position: absolute;
+}
+
+.left-comic i {
+  background-color: var(--dark-yellow);
+  bottom: -3%;
+  right: 4%;
+}
+
+.right-comic i {
+  background-color: var(--dark-orange);
+  top: -5%;
+  left: 4%;
+}
+
+/* 拇指样式 */
+.thumbs {
+  background-color: var(--dark-purple);
+  border-radius: 50px;
+  height: 45%; 
+  width: 30%;
+  position: absolute; 
+  bottom: 20%;
+}
+
+.left-thumb {
+  left: -5%;
+  transform: rotate(45deg);
+  transform-origin: right center;
+}
+
+.right-thumb {
+  right: -5%;
+  transform: rotate(-15deg);
+  transform-origin: left center;
+}
+
+/* 手掌样式 */
+.palms {
+  background-color: var(--purple);
+  border-radius: 50px;
+  height: 50%; 
+  width: 105%;
+  position: absolute; 
+  bottom: -10%;
+}
+
+/* 腿部样式 */
+.legs {
+  background-color: var(--gray);
+  border-radius: 0px 0px 5px 5px;
+  height: 65%; 
+  width: 35%;
+  position: absolute; 
+  bottom: -30%;
+}
+
+.left-leg {
+  box-shadow: inset -5px -1px 5px 0px var(--shadow);
+  left: 1%;
+}
+
+.right-leg{
+  box-shadow: inset 5px -1px 5px 0px var(--shadow);
+  right: 1%;
+}
+
+.toe-nails {
+  background-color: var(--white);
+  border-radius: 10px 10px 50% 50%;
+  height: 4%; 
+  width: 10%;
+  position: absolute; 
+  bottom: 0;
+}
+
+.left-toe-nails {
+  box-shadow: 20px 0px 0px 0px var(--white),
+              40px 0px 0px 0px var(--white);
+  left: 5%;
+}
+
+.right-toe-nails {
+  box-shadow: -20px 0px 0px 0px var(--white),
+              -40px 0px 0px 0px var(--white);
+  right: 5%;
+}
+
+/* 内衣样式 */
+.underwear {
+  /* background-color: var(--white); */
+  border-radius: 0px 0px 50% 50%;
+  border-top: 20px solid var(--dark-white);
+  box-shadow: 0px -2px 5px 0px var(--shadow);
+  height: 40%; 
+  width: 100%;
+  position: absolute; 
+  bottom: -1%;
+}
+
+.inner-lining {
+  border-top: 4px dashed var(--dark-gray);
+  height: 0; 
+  width: 100%;
+  position: absolute;
+  top: -12%;
+  z-index: 3;
+}
+
+.middle {
+  background-color: var(--dark-white);
+  border-radius: 0px;
+  height: 110%; 
+  width: 10%;
+  position: absolute;
+  top: -10%; 
+  left: 45.5%;
+}
+
+.leg-lining {
+  background-color: var(--white);
+  border-bottom: 3px solid var(--shadow);
+  height: 100%; 
+  width: 46%;
+  position: absolute; 
+  bottom: 0;
+}
+
+.left-lining {
+  border-radius: 0 0 0 90%;
+  left: 0;
+}
+
+.right-lining {
+  border-radius: 0 0 90% 0;
+  right: 0;
+}
+
+/* 漫画堆样式 */
+.comic-pile {
+  /* 可以根据需要调整位置和样式 */
+}
+
+.animated-comics {
+  border-radius: 2px;
+  box-shadow: 3px 1px 0px 0px var(--dark-white);
+  height: 16.5%; 
+  width: 10%;
+  position: absolute;
+  will-change: transform, opacity;
+  z-index: 3;
+}
+
+.animated-comics:before,
+.animated-comics:after {
+  content: '';
+  position: absolute;
+}
+
+.animated-comics:before {
+  height: 65%; 
+  width: 90%;
+  left: 5%; 
+  bottom: 2%;
+}
+
+.animated-comics:after {
+  height: 20%; 
+  width: 23%;
+  left: 10%;
+  top: 5%;
+}
+
+/* 下落动画定义 */
+.falling-comics1 {
+  animation: fallingComic1 3s ease-in-out infinite;
+  background-color: var(--pink);
+  right: 65%;
+  top: 2%;
+}
+
+.falling-comics1:before,
+.falling-comics1:after {
+  background-color: var(--dark-pink);
+}
+
+.falling-comics2 {
+  animation: fallingComic2 2s ease-in-out infinite;
+  background-color: var(--white);
+  right: 10%;
+  top: 4%;
+}
+
+.falling-comics2:before, 
+.falling-comics2:after {
+  background-color: var(--dark-white);
+}
+
+.falling-comics3 {
+  animation: fallingComic3 1.7s ease-in-out infinite;
+  background-color: var(--light-black);
+  right: 55%;
+  top: 6%;
+}
+
+.falling-comics3:before,
+.falling-comics3:after {
+  background-color: var(--black);
+}
+
+.falling-comics4 {
+  animation: fallingComic2 1.5s ease-in-out infinite;
+  background-color: var(--gray);
+  left: 7%;
+  top: 5%;
+}
+
+.falling-comics4:before, 
+.falling-comics4:after {
+  background-color: var(--dark-white);
+}
+
+.falling-comics5 {
+  animation: fallingComic5 3s ease-in-out infinite;
+  background-color: var(--yellow);
+  left: 65%;
+  top: 3%;
+}
+
+.falling-comics5:before,
+.falling-comics5:after {
+  background-color: var(--dark-yellow);
+}
+
+.falling-comics6 {
+  animation: fallingComic2 1.7s ease-in-out infinite;
+  background-color: var(--orange);
+  right: 55%;
+  top: 1%;
+}
+
+.falling-comics6:before,
+.falling-comics6:after {
+  background-color: var(--dark-orange);
+}
+
+/* 关键帧动画 */
+
+/* 嘴巴的恶魔笑动画 */
+@keyframes evilLaugh {
+  0%, 100% { transform: scale(1, 1); }
+  50% { transform: scale(0.9, 0.8); }
+}
+
+/* 左手臂挥动 */
+@keyframes waveLeftArm {
+  0%, 100% { transform: rotate(115deg); }
+  50% { transform: rotate(130deg); }
+}
+
+/* 右手臂挥动 */
+@keyframes waveRightArm {
+  0%, 100% { transform: rotate(-115deg); }
+  50% { transform: rotate(-140deg); }
+}
+
+/* 漫画书下落动画1 */
+@keyframes fallingComic1 {
+  0% { transform: translateY(0%) rotate(0deg) scale(1); opacity: 1; }
+  50% { transform: translateY(200%) rotate(45deg) scale(0.8); opacity: 0.7; }
+  100% { transform: translateY(400%) rotate(-45deg) scale(0.5); opacity: 0.3; }
+}
+
+/* 漫画书下落动画2 */
+@keyframes fallingComic2 {
+  0% { transform: translateY(0%) rotate(0deg) scale(1); opacity: 1; }
+  100% { transform: translateY(400%) rotate(5deg) scale(0.8); opacity: 0.3; }
+}
+
+/* 漫画书下落动画3 */
+@keyframes fallingComic3 {
+  0% { transform: translateY(0%) rotate(0deg) scale(1); opacity: 1; }
+  50% { transform: translateY(200%) rotate(-45deg) scale(0.8); opacity: 0.7; }
+  100% { transform: translateY(400%) rotate(2deg) scale(0.5); opacity: 0.3; }
+}
+
+/* 漫画书下落动画5 */
+@keyframes fallingComic5 {
+  0% { transform: translateY(0%) rotate(0deg) scale(1); opacity: 1; }
+  25% { transform: translateY(100%) rotate(-45deg) scale(0.8); opacity: 0.7; }
+  55% { transform: translateY(300%) rotate(45deg) scale(0.5); opacity: 0.3; }
+  100% { transform: translateY(400%) rotate(-45deg) scale(1); opacity: 0.3; }
+}
+
+/* 整体旋转动画 */
+@keyframes rotateContainer {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 加载进度条（可选） */
+/* 如果需要添加加载进度条，请取消下面的注释并将相应的 HTML 和 CSS 添加到文件中 */
+
+ /*
+.progress-bar {
+  width: 80%;
+  height: 10px;
+  background-color: var(--dark-gray);
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 10px;
+  align-self: center; /* 居中对齐 */
+
+.progress {
+  width: 0%;
+  height: 100%;
+  background-color: var(--yellow);
+  animation: loadProgress 5s linear infinite;
+}
+
+@keyframes loadProgress {
+  0% { width: 0%; }
+  50% { width: 100%; }
+  100% { width: 0%; }
+}
+*/
+
+/* 尊重用户的减少动画偏好 */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* 响应式设计优化 */
+@media (max-width: 800px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .container {
+    height: 300px; 
+    width: 400px;
+    top: 20px;
+  }
+  .underwear .inner-lining {
+    border-top: 2px dashed var(--dark-gray);
+    top: -20%;
+  }
+  /* 根据需要添加更多响应式调整 */
+}
