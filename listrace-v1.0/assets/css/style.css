@@ -193,10 +193,21 @@ html,body{height: 100%;}
         3. Top-area
 --------------------------------------*/
 nav.navbar.bootsnav {
-    background-color:#fff;
-    border-bottom: transparent;
+  background-color: #5e748c;
+  border-bottom: transparent;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease; /* 添加過渡效果 */
+
+  position: absolute;
+  width: 50%;
+  left: 0;
+  top: 0;
 }
-.wrap-sticky nav.navbar.bootsnav.sticked {background-color: #fff;box-shadow: 0 2px 5px rgba(0,0,0,.2);}
+
+.wrap-sticky nav.navbar.bootsnav.sticked {
+  background-color: #164063;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.5s ease, box-shadow 0.5s ease; /* 添加過渡效果 */
+}
 
 /*.navbar-brand*/
 .navbar-header a.navbar-brand,.navbar-header a.navbar-brand:hover,.navbar-header a.navbar-brand:focus {
@@ -209,12 +220,12 @@ nav.navbar.bootsnav {
 }
 .navbar-header a.navbar-brand span{display: inline-block;color:#ff545a;text-transform:capitalize;}
 
-.wrap-sticky nav.navbar.bootsnav.sticked .navbar-header a.navbar-brand,.wrap-sticky nav.navbar.bootsnav.sticked .navbar-header a.navbar-brand:hover,.wrap-sticky nav.navbar.bootsnav.sticked .navbar-header a.navbar-brand:focus {padding:30px 0px;}
+.wrap-sticky nav.navbar.bootsnav.sticked .navbar-header a.navbar-brand,.wrap-sticky nav.navbar.bootsnav.sticked .navbar-header a.navbar-brand:hover,.wrap-sticky nav.navbar.bootsnav.sticked .navbar-header a.navbar-brand:focus {padding:-25px 0px;}
 /*.navbar-brand*/
 
 /*.nav li*/
 nav.navbar.bootsnav ul.nav > li > a {
-    color: #859098;
+    color: #ffffff;
     font-size: 14px;
     font-weight: 500;
     text-transform:uppercase;
@@ -235,7 +246,7 @@ nav.navbar.bootsnav ul.nav > li.dropdown span {
     font-size: 8px;
     margin-left: 15px;
 }
-.wrap-sticky nav.navbar.bootsnav.sticked ul.nav > li > a{padding:34px 21px;}
+.wrap-sticky nav.navbar.bootsnav.sticked ul.nav > li > a,nav.navbar.bootsnav ul.nav > li > a{padding:34px 21px;}
 /*.nav li*/
 
 /*.menu-ui-design*/
@@ -273,7 +284,7 @@ img {
 
 .welcome-hero {
     position: relative;
-    background: url(../images/welcome-hero/banner.jpg) no-repeat center center;
+    background: url(../images/welcome-hero/banner1.jpg) no-repeat center center;
     background-size: cover;
     text-align: center;
     height: 50vh; /* 使用視口高度 */
@@ -341,7 +352,7 @@ img {
 }
 .single-welcome-hero-form input[type="text"]{
     font-size: 14px;
-    color: #859098;
+    color: #ffffff;
     text-transform: capitalize;
     font-weight: 500;
 }
@@ -359,7 +370,7 @@ img {
     color:  #fff;
     width:  170px;
     height:  70px;
-    background:  #ff545a;
+    background:  #ff2f36;
     text-transform:  capitalize;
     margin-left:  30px;
     border-radius: 3px;
@@ -883,6 +894,14 @@ img {
 /*-------------------------------------
         12. Footer
 --------------------------------------*/
+.footer {
+  background-color: #292922; /* 替換為你想要的顏色 */
+}
+
+
+
+
+
 .footer-menu {padding: 45px 0;}
 .footer-menu .navbar-header{padding:0;}
 .footer-menu .navbar-header a.navbar-brand,.footer-menu.footer-menu .navbar-header a.navbar-brand:hover,.footer-menu .navbar-header a.navbar-brand:focus{
@@ -892,7 +911,7 @@ img {
 .footer-menu ul.footer-menu-item{text-align: right;}
 .footer-menu ul.footer-menu-item li{display: inline-block;}
 .footer-menu ul.footer-menu-item li a {
-    color: #859098;
+    color: #ffffff;
     font-size: 14px;
     text-transform: uppercase;
     padding-left: 40px;
