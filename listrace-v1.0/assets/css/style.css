@@ -287,20 +287,20 @@ img {
 }
 
 .welcome-hero {
-    position: relative;
-    background: url(../images/welcome-hero/banner1.jpg) no-repeat center center;
-    background-size: cover;
-    text-align: center;
-    height: 60vh; /* 使用視口高度 */
-    z-index: 1;
+  position: relative;
+  background: url(../images/welcome-hero/banner1.jpg) no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  height: 100vh; /* 讓它填滿整個螢幕 */
+  width: 100vw;
+  z-index: 1;
 }
 
 @media (max-width: 768px) {
-    .welcome-hero {
-        height: 20vh; /* 小於768px寬度時，調整高度 */
-    }
-
-    /* 其他針對小屏幕的樣式調整 */
+  .welcome-hero {
+      height: 100vh; /* 在手機上也填滿 */
+  }
 }
 
 
@@ -402,7 +402,9 @@ img {
 
 .list-topics-content {
     position: relative;
-    top: -98px;
+    top: -50vh;
+
+
     z-index: 1;
 }
 .list-topics-content ul li {
