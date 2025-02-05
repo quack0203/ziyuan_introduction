@@ -1,7 +1,7 @@
-	/*
-  	Flaticon icon font: Flaticon
-  	Creation date: 16/05/2018 10:21
-  	*/
+/*
+   Flaticon & IcoMoon icon font: Flaticon & IcoMoon
+   Creation date: 16/05/2018 10:21
+*/
 
 @font-face {
   font-family: "Flaticon";
@@ -14,21 +14,45 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "IcoMoon";
+  src: url("../fonts/icomoon.eot");
+  src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/icomoon.woff") format("woff"),
+       url("../fonts/icomoon.ttf") format("truetype"),
+       url("../fonts/icomoon.svg#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: "Flaticon";
     src: url("../fonts/Flaticon.svg#Flaticon") format("svg");
   }
+  @font-face {
+    font-family: "IcoMoon";
+    src: url("../fonts/icomoon.svg#icomoon") format("svg");
+  }
 }
 
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
-  font-family: Flaticon;
+  font-family: "Flaticon";
   font-size: 20px;
   font-style: normal;
   margin-left: 0px;
 }
 
+[class^="icon-"]:before, [class*=" icon-"]:before,
+[class^="icon-"]:after, [class*=" icon-"]:after {   
+  font-family: "IcoMoon";
+  font-size: 20px;
+  font-style: normal;
+  margin-left: 0px;
+}
+
+/* Flaticon 原始圖示 */
 .flaticon-placeholder:before { content: "\f100"; }
 .flaticon-search:before { content: "\f101"; }
 .flaticon-gps-fixed-indicator:before { content: "\f102"; }
@@ -41,3 +65,11 @@
 .flaticon-location-on-road:before { content: "\f109"; }
 .flaticon-networking:before { content: "\f10a"; }
 .flaticon-lightbulb-idea:before { content: "\f10b"; }
+
+/* IcoMoon 圖示 */
+.icon-user:before { content: "\e900"; }
+.icon-drivers-license-o:before { content: "\e901"; }
+.icon-id-card-o:before { content: "\e901"; }
+.icon-study:before { content: "\e902"; }
+.icon-home:before { content: "\e903"; }
+.icon-office:before { content: "\e904"; }
