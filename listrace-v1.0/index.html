@@ -5,7 +5,8 @@
     <!-- meta data -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.5, minimum-scale=0.8, user-scalable=no">
+
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!--font-family-->
@@ -50,12 +51,11 @@
 
 
 
-
+    <!--河馬等待-->
 
     <div id="preloader">
         <div class="outer-frame">
           <div class="preloader-container">
-            <!-- 放置您原本的內容 -->
             <div class="head">
               <div class="ear left-ear">
                 <div class="inner-ear left-inner-ear"></div>
@@ -134,12 +134,12 @@
           </div>
           
       </div>
-      
-      
-
-
 
     <!-- 加載畫面結束 -->
+
+
+
+
 
     <!-- 主要內容開始 -->
     <div class="main-content">
@@ -170,14 +170,20 @@
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
                             <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-                                <li class=" scroll active"><a href="#home">home</a></li>
-                                <li class="scroll"><a href="#works">how it works</a></li>
-                                <li class="scroll"><a href="#blog">blog</a></li>
-                                <li class="scroll"><a href="#contact">contact</a></li>
+                                <li class="scroll active"><a href="#home">首頁</a></li>
+                                <li class="scroll"><a href="#works">基本資料</a></li>
+                                <li class="scroll"><a href="#aboutme">關於我</a></li>
+                                <li class="scroll"><a href="#blog">專業能力</a></li>
+                                <li class="scroll"><a href="#contact">學歷</a></li>
+                                <li class="scroll"><a href="#experience">工作經驗</a></li>
                             </ul><!--/.nav -->
                         </div><!-- /.navbar-collapse -->
                     </div><!--/.container-->
                 </nav><!--/nav-->
+
+
+
+                
                 <!-- End Navigation -->
             </div><!--/.header-area-->
             <div class="clearfix"></div>
@@ -204,62 +210,67 @@
                 <div class="list-topics-content">
                     <ul>
                         <li>
-                            <div class="single-list-topics-content">
-                                <div class="single-list-topics-icon">
-                                    <i class="flaticon-restaurant"></i>
+                            <a href="#works">
+                                <div class="single-list-topics-content">
+                                    <div class="single-list-topics-icon">
+                                        <i class="icon-user"></i>
+                                    </div>
+                                    <h2>這裡可能指是</h2>
                                 </div>
-                                <h2><a href="#">resturent</a></h2>
-                                <p>150 listings</p>
-                            </div>
+                            </a>
                         </li>
                         <li>
-                            <div class="single-list-topics-content">
-                                <div class="single-list-topics-icon">
-                                    <i class="flaticon-travel"></i>
+                            <a href="#aboutme">
+                                <div class="single-list-topics-content">
+                                    <div class="single-list-topics-icon">
+                                        <i class="icon-home"></i>
+                                    </div>
+                                    <h2>暫時是這樣</h2>
                                 </div>
-                                <h2><a href="#">destination</a></h2>
-                                <p>214 listings</p>
-                            </div>
+                            </a>
                         </li>
                         <li>
-                            <div class="single-list-topics-content">
-                                <div class="single-list-topics-icon">
-                                    <i class="flaticon-building"></i>
+                            <a href="#blog">
+                                <div class="single-list-topics-content">
+                                    <div class="single-list-topics-icon">
+                                        <i class="icon-drivers-license-o"></i>
+                                    </div>
+                                    <h2>將來會導出去到</h2>
                                 </div>
-                                <h2><a href="#">hotels</a></h2>
-                                <p>185 listings</p>
-                            </div>
+                            </a>
                         </li>
                         <li>
-                            <div class="single-list-topics-content">
-                                <div class="single-list-topics-icon">
-                                    <i class="flaticon-pills"></i>
+                            <a href="#contact">
+                                <div class="single-list-topics-content">
+                                    <div class="single-list-topics-icon">
+                                        <i class="icon-study"></i>
+                                    </div>
+                                    <h2>雲端或啥</h2>
                                 </div>
-                                <h2><a href="#">healthcaree</a></h2>
-                                <p>200 listings</p>
-                            </div>
+                            </a>
                         </li>
                         <li>
-                            <div class="single-list-topics-content">
-                                <div class="single-list-topics-icon">
-                                    <i class="flaticon-transport"></i>
+                            <a href="#experience">
+                                <div class="single-list-topics-content">
+                                    <div class="single-list-topics-icon">
+                                        <i class="icon-office"></i>
+                                    </div>
+                                    <h2>可以下載酷酷APK</h2>
                                 </div>
-                                <h2><a href="#">automotion</a></h2>
-                                <p>120 listings</p>
-                            </div>
+                            </a>
                         </li>
                     </ul>
                 </div>
-            </div><!--/.container-->
-
-        </section><!--/.list-topics-->
+            </div>
+        </section>
+        <!--/.list-topics-->
         <!--list-topics end-->
 
         <!--works start -->
-        <section id="works" class="works">
+        <section id="works" class="works"  style="padding-top: 50px">
             <div class="container">
                 <div class="section-header">
-                    <h2>how it works</h2>
+                    <h2>基本資料</h2>
                     <p>Learn More about how our website works</p>
                 </div><!--/.section-header-->
                 <div class="works-content">
@@ -313,39 +324,44 @@
         </section>
 
 
-        <section id="statistics"  class="statistics">
+
+        <div id="aboutme" class="section-header text-center"  style="padding-top: 50px">
+            <h2>關於我</h2>
+        </div>
+
+        <section   class="statistics">
             <div class="container">
                 <div class="statistics-counter"> 
                     <div class="col-md-3 col-sm-6">
                         <div class="single-ststistics-box">
                             <div class="statistics-content">
-                                <div class="counter">90 </div> <span>K+</span>
+                                <div class="counter">5年</div> <span>💼</span>
                             </div><!--/.statistics-content-->
-                            <h3>listings</h3>
+                            <h3>工作經驗</h3>
                         </div><!--/.single-ststistics-box-->
                     </div><!--/.col-->
                     <div class="col-md-3 col-sm-6">
                         <div class="single-ststistics-box">
                             <div class="statistics-content">
-                                <div class="counter">40</div> <span>k+</span>
+                                <div class="counter">Python</div> <span>🐍</span>
                             </div><!--/.statistics-content-->
-                            <h3>listing categories</h3>
+                            <h3>專精程式語言</h3>
                         </div><!--/.single-ststistics-box-->
                     </div><!--/.col-->
                     <div class="col-md-3 col-sm-6">
                         <div class="single-ststistics-box">
                             <div class="statistics-content">
-                                <div class="counter">65</div> <span>k+</span>
+                                <div class="counter">北科大</div> <span>🏫</span>
                             </div><!--/.statistics-content-->
-                            <h3>visitors</h3>
+                            <h3>學校</h3>
                         </div><!--/.single-ststistics-box-->
                     </div><!--/.col-->
                     <div class="col-md-3 col-sm-6">
                         <div class="single-ststistics-box">
                             <div class="statistics-content">
-                                <div class="counter">50</div> <span>k+</span>
+                                <div class="counter">羽球</div> <span>🏸</span>
                             </div><!--/.statistics-content-->
-                            <h3>happy clients</h3>
+                            <h3>運動愛好</h3>
                         </div><!--/.single-ststistics-box-->
                     </div><!--/.col-->
                 </div><!--/.statistics-counter-->	
@@ -358,8 +374,7 @@
         <section id="blog" class="blog" >
             <div class="container">
                 <div class="section-header">
-                    <h2>news and articles</h2>
-                    <p>Always upto date with our latest News and Articles </p>
+                    <h2>專業能力</h2>
                 </div><!--/.section-header-->
                 <div class="blog-content">
                     <div class="row">
@@ -417,13 +432,11 @@
             <div class="container">
                 <div class="subscribe-title text-center">
                     <h2>
-                        do you want to add your business listing with us?
+                        學歷
                     </h2>
-                    <p>
-                        Listrace offer you to list your business with us and we very much able to promote your Business.
-                    </p>
                 </div>
                 <div class="row">
+
                     <div class="col-sm-12">
                         <div class="subscription-input-group">
                             <form action="#">
@@ -440,18 +453,93 @@
         </section><!--/subscription-->	
         <!--subscription end -->
 
+
+
+
+
+        <div id="experience" class="section-header text-center"  style="padding-top: 50px">
+            <h2>工作經驗</h2>
+        </div>
+        
+        <section   class="statistics">
+            
+
+            <div class="container">
+
+                
+                <div class="statistics-counter"> 
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single-ststistics-box">
+                            <div class="statistics-content">
+                                <div class="counter">5年</div> <span>💼</span>
+                            </div><!--/.statistics-content-->
+                            <h3>工作經驗</h3>
+                        </div><!--/.single-ststistics-box-->
+                    </div><!--/.col-->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single-ststistics-box">
+                            <div class="statistics-content">
+                                <div class="counter">Python</div> <span>🐍</span>
+                            </div><!--/.statistics-content-->
+                            <h3>專精程式語言</h3>
+                        </div><!--/.single-ststistics-box-->
+                    </div><!--/.col-->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single-ststistics-box">
+                            <div class="statistics-content">
+                                <div class="counter">北科大</div> <span>🏫</span>
+                            </div><!--/.statistics-content-->
+                            <h3>學校</h3>
+                        </div><!--/.single-ststistics-box-->
+                    </div><!--/.col-->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single-ststistics-box">
+                            <div class="statistics-content">
+                                <div class="counter">羽球</div> <span>🏸</span>
+                            </div><!--/.statistics-content-->
+                            <h3>運動愛好</h3>
+                        </div><!--/.single-ststistics-box-->
+                    </div><!--/.col-->
+                </div><!--/.statistics-counter-->	
+            </div><!--/.container-->
+
+
+
+
+
+        </section><!--/.counter-->	
+
+
+
+
+
         <!--footer start-->
         <footer id="footer"  class="footer">
             <div class="container">
                 <div class="footer-menu">
                     <div class="row">
+                        <div class="col-sm-3">
+                            <div class="navbar-header">
+                               <a class="navbar-brand" href="index.html">Quack<span>UwU🦝🩲</span></a>
+                           </div><!--/.navbar-header-->
+                        </div>
                         <div class="col-sm-9">
                             <ul class="footer-menu-item">
-                                <li class="scroll"><a href="#works">how it works</a></li>
-                                <li class="scroll"><a href="#blog">blog</a></li>
-                                <li class="scroll"><a href="#contact">contact</a></li>
+                                <li class="scroll active"><a href="#home">首頁</a></li>
+                                <li class="scroll"><a href="#works">基本資料</a></li>
+                                <li class="scroll"><a href="#aboutme">關於我</a></li>
+                                <li class="scroll"><a href="#blog">專業能力</a></li>
+                                <li class="scroll"><a href="#contact">學歷</a></li>
+                                <li class="scroll"><a href="#experience">工作經驗</a></li>
                             </ul><!--/.nav -->
                         </div>
+
+
+
+
+
+
+
                    </div>
                 </div>
                 <div class="hm-footer-copyright">
@@ -463,11 +551,11 @@
                         </div>
                         <div class="col-sm-7">
                             <div class="footer-social">
-                                <span><i class="fa fa-phone"> 手機：0912 923 951</i></span>
-                                <a href="#"><i class="fa fa-facebook"></i></a>	
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                                <a href="#"><i class="fa fa-google-plus"></i></a>
+                                <span><i>📞 聯繫方法：0912 923 951</i></span>
+                                <a href="#"><i class="fa fa-facebook"></i></a>  
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="mailto:hcu551263@gmail.com?subject=聯絡我們&body=您好，我想詢問關於...">><i class="fa fa-envelope"></i></a>
+                                <a href="#"><i class="fa fa-youtube"></i></a>
                             </div>
                         </div>
                     </div>
@@ -511,7 +599,14 @@
         <!--Custom JS-->
         <script src="assets/js/custom.js"></script>
     
-        <!-- 自定義 Preloader JavaScript -->
+
+
+
+
+        <!-- 自定義 Preloader JavaScript
+         
+            The 內褲河馬耍B梓
+        -->
         <script>
             // 使用 jQuery 實現 Preloader 隱藏
             $(window).on('load', function() {
@@ -523,6 +618,22 @@
                 }, 3000); // 3000 毫秒 = 3 秒
             });
         </script>
+
+
+
+
+
+
+        <!-- 限制大小 -->
+
+        <script src="assets/js/zoom-limiter.js"></script>
+
+
+
+
+
+
+
     
     </div><!-- /.main-content -->
 
