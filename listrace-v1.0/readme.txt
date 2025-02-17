@@ -1,33 +1,53 @@
 -----------------------
-# README
+# Ambasing🥺🥺
 -----------------------
 
-Listrace is a bootstrap 3 framework based html5/css3 directory listing template.It will help developers to rapidly built a directory website
+歡迎點來我的git朋朋或老師或誰 >:D
+希望你們會喜歡
+有興趣可以加我網頁下方的聯繫方式
 
 
-Template Info:
+
+
+版本以及更新內容:
 -----------------------
-Name: 		Listrace - free directory template
-Version: 	1.0
-Author: 	ThemeSINE
-Website: 	https://www.themesine.com/
-
-
-Changelog:
+Version 1.0 2024/12/20
+- 上了個網頁初始模板架上git
 -----------------------
-Version 1.0 21-05-2018
-- initial release 
-
-
-Credits:
+Version 1.1 2024/12/29
+- Update index.html
+- Update style.css
+- 上架loading畫面
+- 新增數個loading的河馬設定
+- 河馬初始架構為: https://codepen.io/oldstandstudio/pen/jxmzPM
+* 數個小動作，更新圖片上架圖片
 -----------------------
-- Twitter Bootstrap http://getbootstrap.com
-- jQuery http://jquery.org
-- Modernizr https://modernizr.com/
-- Sticky.js http://stickyjs.com/
-- JQuery easing https://github.com/gdsmith/jquery.easing
-- Bootsnav http://bootsnav.danurstrap.com/
-
-License:
+Version 1.1.1 2025/1/4
+- 改foolt顏色
+- 小改內容
 -----------------------
-Free License - https://www.themesine.com/license/
+Version 1.1.2 2025/1/9
+- 小改網頁最底下內容
+-----------------------
+Version 1.1.3 2025/1/10
+- 小改網頁最底下內容
+-----------------------
+Version 1.1.4 2025/1/11
+- 更改首頁設定
+-----------------------
+Version 1.1.5 2025/1/12
+- 小改網頁顏色紹定
+-----------------------
+Version 1.1.6 2025/2/4
+- 更新 flaticon.css
+- 新增其他圖片
+-----------------------
+Version 1.2.0 2025/2/5
+- 禁止滾輪放大縮小
+- 新增 listrace-v1.0/assets/js/zoom-limiter.js
+-----------------------
+Version 1.2.1 2025/2/7
+- 調整最初開始網站圖片大小 Vh Vw
+
+
+
